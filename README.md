@@ -73,8 +73,5 @@ The artwork included with this practice project was generated using AI. The imag
 - The Cancel button is not currently included in the add-project form.
 - There is no backend, automated test suite, or production deployment setup.
 
-## Suggested GitHub repository metadata
 
-**About description:** A gothic-themed project planner built with React, TypeScript, Vite, and Tailwind CSS.
 
-**Topics:** `react`, `typescript`, `vite`, `tailwindcss`, `project-planner`, `learning-project`
