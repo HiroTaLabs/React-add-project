@@ -1,8 +1,8 @@
 # Project Chronicle
 
-A small gothic-themed project planner built as a React and TypeScript learning exercise. It lets you create projects, browse project cards, open a project, and add or clear its tasks.
+A gothic-themed project planner built with React, TypeScript, Vite, and Tailwind CSS as a small front-end learning project.
 
-> This is a deliberately simple practice project, not a production-ready task management application. The goal was to learn and practice React components, props, state, forms, and styling without adding unnecessary complexity.
+> Project Chronicle is intentionally simple: it was made to practice React components, props, state, forms, and UI styling—not to be a production-ready task manager.
 
 ## Screenshot
 
@@ -11,19 +11,19 @@ A small gothic-themed project planner built as a React and TypeScript learning e
 ## Features
 
 - Create projects with a title, description, and due date.
-- View projects as cards and open a project's details.
-- Add tasks to a project and clear tasks from its list.
-- Delete a project.
-- Show a small message dialog after project and task actions.
-- Responsive dark interface with gothic artwork, glass-like cards, and rose accents.
+- Browse projects in a responsive card layout and open their details.
+- Add and clear tasks within a project.
+- Delete a project and return to the project list.
+- See a message dialog after project and task actions.
+- Use a dark gothic-inspired interface with rose accents and glass-like project cards.
 
 ## How it works
 
-The app has three views: the project list, the add-project form, and project details. A small `currentPage` state in the main React component selects which view to render. Navigation is handled with callbacks and conditional rendering.
+The app has three views: the project list, the add-project form, and project details. The current view is selected using React state in the main component, with callbacks passed between components.
 
-This project intentionally does **not** use a routing library such as React Router. The view state is enough for this small exercise; a router would be a reasonable next step if the app grew to need URLs, browser history, or deep links.
+There is no routing library (such as React Router). For this small exercise, conditional rendering based on view state was sufficient. A router could be added later if the app needed URLs, browser history, or direct links to projects.
 
-Projects and tasks are held in React state in memory. There is no backend or browser storage, so the data resets when the page is refreshed. This is expected for the current practice version.
+Projects and tasks are stored in React state in memory only. They are lost when the page is refreshed; there is no backend or browser persistence.
 
 ## Tech stack
 
@@ -43,9 +43,7 @@ npm install
 npm run dev
 ```
 
-Vite prints a local URL in the terminal. Open that URL in a browser to use the app.
-
-Useful scripts:
+Open the local URL printed by Vite in your browser.
 
 | Command | Description |
 | --- | --- |
@@ -54,23 +52,29 @@ Useful scripts:
 | `npm run preview` | Preview the production build locally. |
 | `npm run lint` | Run Oxlint. |
 
-## Font credits and licenses
+## Fonts
 
-The interface uses these fonts from Google Fonts:
+The project includes font files from Google Fonts:
 
-- [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond/license?query=Cormorant+Garamond)
-- [EB Garamond](https://fonts.google.com/specimen/EB+Garamond/license?query=EB+Garamond)
+- [Cormorant Garamond — license information](https://fonts.google.com/specimen/Cormorant+Garamond/license?query=Cormorant+Garamond)
+- [EB Garamond — license information](https://fonts.google.com/specimen/EB+Garamond/license?query=EB+Garamond)
 
-The font files are included in `src/assets/font/`. See the linked Google Fonts license pages for their license terms.
+The font files are located in `src/assets/font/`. Refer to the linked pages for the applicable license terms.
 
-## Artwork credits
+## Artwork
 
-Artwork files are included under `src/assets/`. Add the original creator/source and license for each image here before publishing if the artwork is not yours or does not already include attribution. Check that the licenses allow redistribution in a public repository.
+The artwork included with this practice project was generated using AI. The image files are stored under `src/assets/`.
 
-## Current limitations
+## Current scope and limitations
 
-- Projects and tasks are not saved after a page refresh.
+- This is a learning project and intentionally avoids extra architecture for its small scope.
+- Projects and tasks are not persisted between page refreshes.
 - Navigation is view-state based; there are no separate routes or shareable project URLs.
-- The Cancel button on the project form is presentational and is not wired to navigation yet.
-- Action dialogs show result messages; project deletion is not currently guarded by a confirmation dialog.
-- This is a learning project and has not been built out with a backend, automated test suite, or production deployment setup.
+- The Cancel button is not currently included in the add-project form.
+- There is no backend, automated test suite, or production deployment setup.
+
+## Suggested GitHub repository metadata
+
+**About description:** A gothic-themed project planner built with React, TypeScript, Vite, and Tailwind CSS.
+
+**Topics:** `react`, `typescript`, `vite`, `tailwindcss`, `project-planner`, `learning-project`
